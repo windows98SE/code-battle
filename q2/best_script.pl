@@ -5,7 +5,7 @@ open F, ">", 'run_result.txt';
 #elegant but actually 30% slower :P
 #print F "\"$_\", $numbers{$_}\n" for (keys %numbers);
 while (my ($k,$v)=each %numbers){
-  print "\"$k\", $v\n";
+  print F "\"$k\", $v\n";
 }
 close F;
 
