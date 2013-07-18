@@ -12,8 +12,8 @@ sub readfile{
   my @var;
   open F, "<", $_[0];
   while (my $line = <F>){
-	$line =~ s/\r?\n//ig;	
-	push(@var, $line) if($line);
+	$line =~ s/\r?\n//ig;
+	push(@var, $line);
   }
   close(F);
   return map {$_=>1} @var;
