@@ -1,2 +1,4 @@
 #!/usr/bin/perl
-open F,'<numbers.txt';while(<F>){chomp$_;++$h{$_};}open F,'>run_result.txt';print F"\"$_\", $h{$_}\n"for(keys%h);
+#win : type numbers.txt | perl test.pl>result_run.txt
+#nix : cat numbers.txt | ./test.pl>result_run.txt
+open I,"-";map{chomp$_=>$n{$_}++}<>;print "\"$_\", $n{$_}\n"for(keys%n);
